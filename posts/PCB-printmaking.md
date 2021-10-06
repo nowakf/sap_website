@@ -1,6 +1,10 @@
+---
+title: PCB-printmaking
 date: 2017-04-27T14:02:16+02:00
+---
 
 One of the main problems facing printmakers who want to work on metal plates is the cost of everything involved, from the plates (copper, zinc), to the printing machine itself. 
+<!--more-->
 
 From this perspective, PCB plates offer an interesting alternative. They can be etched with any kind of copper etchant (Ferric Chloride is standard), polished, and inked. They typically cost around half what copper costs, per square centimeter. The copper is, I suspect, better quality (since there really is no incentive to not adulterate copper sheet materials, whereas alloying copper for use in electrical circuits is, I think, a bad idea[^]). 
 

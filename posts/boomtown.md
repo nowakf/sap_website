@@ -1,11 +1,14 @@
+---
+title: boomtown
 date: 2017-05-18T14:02:16+02:00
+---
 
 boom town
 
 noun(c) /ˈbuːm ˌtaʊn/
 
 -a town undergoing rapid growth due to sudden prosperity.
-
+<!--more-->
 *BOOMTOWN consists of two parts:*
 
 *B1: a Computer-Numerically-Controlled (CNC) scoop, suspended over a 5 meter by 2 tray, containing strata of black iron oxide, chalk and soil.*

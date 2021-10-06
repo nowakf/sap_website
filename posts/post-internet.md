@@ -1,10 +1,15 @@
+---
+title: post-internet
 date: 2017-05-02T14:02:16+02:00
+---
 
 Post-internet art was coined, at least in part, to describe a new phase of the internet as a cultural force - the internet as a banalized norm.
 
 This, I think, is crazy. We are to the internet what the first cave-painter to draw an elk was to painting. The last years have been years of tumult, torment even, and it's not escaped anybody's notice that these upsets have been in part, driven by the internet.
 
 The internet is less like another channel of discourse, and more like a tick - a tumor, burrowed under the world's skin, pushing the plates apart. Driotcore is absolutely right when he calls our era 'proto', and I think wildly optimistic when he says that 'proto' might be 'proto' to some kind of late-left fantasy. 
+
+<!--more-->
 
 For any practice to gain widespread use, it has to marshal psychological, social, and economic forces so that, in the last instance, it represents a good choice in each of those contexts. 
 

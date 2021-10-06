@@ -1,11 +1,12 @@
 ---
+title: interregnumsketch
 date: 2017-06-05T14:02:16+02:00
 ---
 --------------------------------------- ----------------------------------------
 ![](images/interregnum1.jpg){width=100%} ![](images/interregnum2.jpg){width=100%}
 ![](images/interregnum3.jpg){width=100%} ![](images/interregnum4.jpg){width=100%}
 --------------------------------------- ----------------------------------------
-
+<!--more-->
 Initial sketches of INTERREGNUM:
 
 TECHNICAL:

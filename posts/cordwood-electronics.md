@@ -1,4 +1,7 @@
+---
+title: cordwood-electronics
 date: 2017-05-07T14:02:16+02:00
+---
 
 ![circle](images/cordwood1.jpg)
 
@@ -7,6 +10,8 @@ Some of the first computers found their employment in performing the myriad calc
 "Had Hegel’s philosophy of history embraced this age, Hitler’s robot-bombs would have found their place beside the early death of Alexander and similar images, as one of the empirically selected facts by which the state of the world-spirit manifests itself directly in symbols. Like Fascism itself, the robots career without a subject. Like it they combine the utmost technical perfection with total blindness. And like it they arouse mortal terror and are wholly futile. – “I have seen the world-spirit,” not on horseback but on wings and without a head, and that refutes, at the same stroke, Hegel’s philosophy of history."
 
 Adorno's awareness in this fragment of Minima Moralia, presumably written at some point between 1944 and 1949, is so sharp that it prefigures the symbol that the cold war era pivoted upon - the H-bomb. Wernher Von Braun, largely responsible for Hitler's robot bombs, transitioned smoothly into building robot bombs in New Mexico, finally producing the world's first nuclear ballistic missile. 
+
+<!--more-->
 
 It was largely the work of the rocket scientists of Peremunde, eagerly snapped up by the Americans and the Soviets, that the world would live in the shadow of, until the end of the Cold War. Like the V2 rockets, the nuclear ballistic missiles of the next half century epitomized the fusion of technical mastery with blindness, each new generation more perfectly fusing terror to futility, until even their hypothetical use was, ultimately, mass suicide.
 

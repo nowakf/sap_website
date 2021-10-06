@@ -1,5 +1,9 @@
+---
+title: raytracer
 date: 2018-05-05T14:02:16+02:00
+---
 ![ray](images/raytracer1.jpg) 
+<!--more-->
 ![ray](images/raytracer2.jpg)
 ![ray](images/raytracer3.jpg)
 ![ray](images/raytracer4.jpg)
