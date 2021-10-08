@@ -22,7 +22,7 @@ for i, a in ipairs(arg) do
 	local s = assert(f:read('*a'))
 	local header, article_s = s:match('%-%-%-+\n(.-)%-%-%-+()')
 	local elem = {
-		filename = a
+		filename = a:gsub('%.md', '%.html')
 	}
 	for line in header:gmatch('.-\n') do
 		key, value = line:match('%s*(%S+)%s*:%s*(.-)\n')
