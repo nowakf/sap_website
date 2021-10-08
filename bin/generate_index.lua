@@ -12,7 +12,7 @@ function os.capture(cmd, raw)
 end
 
 function linkify(filename)
-	return filename:match('^.+/(.+)$'):gsub('.md', '.html')
+	return filename:match('^.+/(.+)$'):gsub('%.md', '.html')
 end
 
 local front_matter = {}
@@ -22,7 +22,7 @@ for i, a in ipairs(arg) do
 	local s = assert(f:read('*a'))
 	local header, article_s = s:match('%-%-%-+\n(.-)%-%-%-+()')
 	local elem = {
-		filename = a:gsub('%.md', '%.html')
+		filename = linkify(a)
 	}
 	for line in header:gmatch('.-\n') do
 		key, value = line:match('%s*(%S+)%s*:%s*(.-)\n')
