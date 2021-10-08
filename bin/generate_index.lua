@@ -1,4 +1,5 @@
 #!/usr/bin/luajit
+require 'lyaml'
 
 function os.capture(cmd, raw)
   local f = assert(io.popen(cmd, 'r'))
@@ -18,9 +19,10 @@ end
 local front_matter = {}
 
 for i, a in ipairs(arg) do
-	local fraw = os.capture([[yq -f extract e '[.title, .date, .keywords?]' ]] .. arg)
-	front_matter[i] = {
-	}
+	local f = assert(io.open(a))
+	local s = assert(f:read('*a'))
+	local header = s:match('%-%-%-+.*%-%-%-+')
+	front_matter[i] = lyaml.load(header)
 end
 
 for _, a in ipairs(arg) do
