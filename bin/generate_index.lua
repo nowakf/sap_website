@@ -22,14 +22,14 @@ for i, a in ipairs(arg) do
 	local s = assert(f:read('*a'))
 	local header, article_s = s:match('%-%-%-+\n(.-)%-%-%-+()')
 	local elem = {
-		filename = arg
+		filename = a
 	}
 	for line in header:gmatch('.-\n') do
 		key, value = line:match('%s*(%S+)%s*:%s*(.-)\n')
 		elem[key] = value
 	end
 	local fold_end = s:find('<!--more-->', article_start, true)
-	elem.above_fold = s:sub(article_s, fold_end-1)
+	elem['above_fold'] = s:sub(article_s, fold_end-1)
 	front_matter[i] = elem
 end
 
@@ -48,19 +48,9 @@ table.sort(front_matter, function(a, b) return parse_date(a.date) > parse_date(b
 
 for _, elem in ipairs(front_matter) do
 	print(string.format([[
+<p class="date">%s</p>
 #### [%s](%s)
 %s
-%s
-	]], elem['title'], elem['filename'], elem['date'], elem['above_fold']))
+	]], elem['date'], elem['title'], elem['filename'], elem['above_fold']))
 end
 
-for _, a in ipairs(arg) do
-	local f = assert(io.open(a))
-	local s = assert(f:read('*a'))
-	local title, article_start = s:match('title:%s*(.-)\n.-%-%-+()')
-	local fold_end = s:find('<!--more-->', article_start, true)
-	print(string.format('#### [%s](%s)\n', title, linkify(a)))
-	if fold_end and fold_end > article_start then
-		print(s:sub(article_start, fold_end-1) .. '\n')
-	end
-end
