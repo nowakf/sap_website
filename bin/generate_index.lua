@@ -15,12 +15,20 @@ function linkify(filename)
 	return filename:match('^.+/(.+)$'):gsub('.md', '.html')
 end
 
+local front_matter = {}
+
+for i, a in ipairs(arg) do
+	local fraw = os.capture([[yq -f extract e '[.title, .date, .keywords?]' ]] .. arg)
+	front_matter[i] = {
+	}
+end
+
 for _, a in ipairs(arg) do
 	local f = assert(io.open(a))
 	local s = assert(f:read('*a'))
 	local title, article_start = s:match('title:%s*(.-)\n.-%-%-+()')
 	local fold_end = s:find('<!--more-->', article_start, true)
-	print(string.format('[%s](%s)\n', title, linkify(a)))
+	print(string.format('#### [%s](%s)\n', title, linkify(a)))
 	if fold_end and fold_end > article_start then
 		print(s:sub(article_start, fold_end-1) .. '\n')
 	end
