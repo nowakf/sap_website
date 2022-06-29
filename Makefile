@@ -24,13 +24,14 @@ build/assets/%: posts/assets/%
 	@echo $@ $<
 	cp $< $@
 
-build/%.html: posts/%.md $(template)
+build/%.html: posts/%.md $(template) header.html
 	@echo $@ $<
-	pandoc  --standalone           \
-		--css=$(style_sheet)   \
-		--template=$(template) \
-		--from=markdown        \
-		--to=html -o $@ $<     \
+	pandoc  --standalone                    \
+		--include-in-header=header.html \
+		--css=$(style_sheet)            \
+		--template=$(template)          \
+		--from=markdown                 \
+		--to=html -o $@ $<              \
 
 build/images/%.webm: posts/images/%.*
 	@echo $@ $<
