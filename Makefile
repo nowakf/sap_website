@@ -1,4 +1,4 @@
-.PHONY: index css images html assets all videos push
+.PHONY: index css images html assets all videos push version
 
 style_sheet = style.css
 template = template.html
@@ -78,10 +78,14 @@ assets: $(asset_files)
 	@echo $@ $<
 	@echo copying assets
 
-all: css html images videos index about assets
+version: 
+	git add .
+	git commit 
+
+all: css html images videos index about assets version
 
 push: all
-	cd build
-	git add .
-	git commit -m "$$(date)"
-	git push -u origin master
+	cd build;                  \
+	git add .;                 \
+	git commit -m "$$(date)";  \
+	git push -u origin master; \
