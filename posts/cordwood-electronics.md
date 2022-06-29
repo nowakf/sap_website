@@ -2,8 +2,7 @@
 title: cordwood-electronics
 date: 2017-05-07T14:02:16+02:00
 ---
-
-![circle](images/cordwood1.jpg)
+![circles](images/cordwood1.jpg)\
 
 Some of the first computers found their employment in performing the myriad calculations of the Manhattan project, and the first monolithic integrated circuit found its first customer in the US air force, whose missile guidance systems pushed the limits of both raw power, and miniaturization.
 

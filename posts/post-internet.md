@@ -2,7 +2,6 @@
 title: post-internet
 date: 2017-05-02T14:02:16+02:00
 ---
-
 Post-internet art was coined, at least in part, to describe a new phase of the internet as a cultural force - the internet as a banalized norm.
 
 This, I think, is crazy. We are to the internet what the first cave-painter to draw an elk was to painting. The last years have been years of tumult, torment even, and it's not escaped anybody's notice that these upsets have been in part, driven by the internet.

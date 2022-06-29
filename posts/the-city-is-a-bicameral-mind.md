@@ -2,7 +2,6 @@
 title: the city and its unconscious
 date: 2017-05-11T14:02:16+02:00
 ---
-
 Under capitalism, discourse is structured so that violence is invisible. If it reaches us at all, it comes through dry statistics, atomized experience, or anecdotal accounts. 
 
 For this reason, violence occurs as an inexplicable irruption: a senseless fight, a riot that comes from nowhere, a burned car, a dead body you discover in the back yard. 

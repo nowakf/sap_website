@@ -2,7 +2,6 @@
 title: notes-towards
 date: 2017-04-27T14:02:16+02:00
 ---
-
 BACKGROUND:
 There are a great many texts[^1] that talk about how, even by simple presence in a city, a sense of freedom is produced.[^2] This freedom comes in two components: first, the freedom from the basic violence of nature. Second, the freedom from the oppressive family structure, invasive community organization, and violence of traditional farm life.[^3]
 

@@ -1,22 +1,12 @@
 #!/usr/bin/luajit
 
-function os.capture(cmd, raw)
-  local f = assert(io.popen(cmd, 'r'))
-  local s = assert(f:read('*a'))
-  f:close()
-  if raw then return s end
-  s = string.gsub(s, '^%s+', '')
-  s = string.gsub(s, '%s+$', '')
-  s = string.gsub(s, '[\n\r]+', ' ')
-  return s
-end
-
 function linkify(filename)
 	return filename:match('^.+/(.+)$'):gsub('%.md', '.html')
 end
 
 local front_matter = {}
 
+--some pretty rough yaml parsing here. It'll prolly shit at some point
 for i, a in ipairs(arg) do
 	local f = assert(io.open(a))
 	local s = assert(f:read('*a'))
@@ -28,29 +18,38 @@ for i, a in ipairs(arg) do
 		key, value = line:match('%s*(%S+)%s*:%s*(.-)\n')
 		elem[key] = value
 	end
-	local fold_end = s:find('<!--more-->', article_start, true)
+	local fold_end = s:find('<!--more-->', article_start, true) or article_s + 1
 	elem['above_fold'] = s:sub(article_s, fold_end-1)
 	front_matter[i] = elem
 end
 
 --v. simplistic YY MM DD
 function parse_date(date)
-	local cnt = 0;
+	local cnt = 1;
 	local val = 0;
 	local date_scales = {1, 12, 31}
 	for part in date:gmatch('(%d+)%-') do
-		val = val + tonumber(part) * date_scales[cnt+1]
+		val = val + tonumber(part) / date_scales[cnt]
+		cnt = cnt+1
 	end
 	return val
 end
 
 table.sort(front_matter, function(a, b) return parse_date(a.date) > parse_date(b.date) end)
 
-for _, elem in ipairs(front_matter) do
-	print(string.format([[
-<p class="date">%s</p>
-#### [%s](%s)
+local post_template = [[
+<div class="post-title-box"> 
+<div class="post-title"> <a href="%s">%s</a></div>
+<p class="date">%s</p> </div>
 %s
-	]], elem['date'], elem['title'], elem['filename'], elem['above_fold']))
+[more...](%s)
+]]
+
+for _, elem in ipairs(front_matter) do
+	print(string.format(post_template, elem['filename'],
+						elem['title'],
+						elem['date']:match('%d+%p%d+%p%d+'):gsub('-', '.'),
+						elem['above_fold'],
+						elem['filename']))
 end
 

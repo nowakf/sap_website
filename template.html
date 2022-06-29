@@ -34,12 +34,14 @@ $endfor$
 $for(include-before)$
 $include-before$
 $endfor$
+$if(title)$
+<header id="title-block-header">
+<div class="post-title-box">
+<div class="post-title"><a href="index.html">$title$</a></div>
 $if(date)$
 <p class="date">$date$</p>
 $endif$
-$if(title)$
-<header id="title-block-header">
-<h1 class="title">$title$</h1>
+</div>
 $if(subtitle)$
 <p class="subtitle">$subtitle$</p>
 $endif$

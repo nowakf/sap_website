@@ -2,7 +2,6 @@
 title: boomtown
 date: 2017-05-18T14:02:16+02:00
 ---
-
 boom town
 
 noun(c) /ˈbuːm ˌtaʊn/

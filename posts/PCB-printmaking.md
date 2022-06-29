@@ -2,7 +2,6 @@
 title: PCB-printmaking
 date: 2017-04-27T14:02:16+02:00
 ---
-
 One of the main problems facing printmakers who want to work on metal plates is the cost of everything involved, from the plates (copper, zinc), to the printing machine itself. 
 <!--more-->
 
