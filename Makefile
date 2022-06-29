@@ -54,15 +54,15 @@ build/about.html: about.md
 		--to=html -o build/about.html $<
 
 build/index.html: index.md
-	pandoc  --standalone                 \
-		--css=$(index_style_sheet)   \
-		--template=$(index_template) \
-		--from=markdown              \
+	pandoc  --standalone                    \
+		--css=$(index_style_sheet)      \
+		--include-in-header=header.html \
+		--template=$(index_template)    \
+		--from=markdown                 \
 		--to=html -o build/index.html $<
 
 index.md: bin/generate_index.lua header.html $(md_files)
-	cat header.html > index.md
-	bin/generate_index.lua $(md_files) >> index.md
+	bin/generate_index.lua $(md_files) > index.md
 
 css: build/$(style_sheet)
 
