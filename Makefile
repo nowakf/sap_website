@@ -4,6 +4,7 @@ style_sheet = style.css
 template = template.html
 index_template = template.html
 index_style_sheet = style.css
+format_in = markdown+footnotes
 
 #raw_images = $(shell find posts -type f -print0 | xargs -0 file --mime-type | grep -F 'image/' | cut -d ':' -f 1)
 #proc_images = $(patsubst %,build/images/%.jpg,$(notdir $(basename $(raw_images))))
@@ -30,7 +31,7 @@ build/%.html: posts/%.md $(template) header.html
 		--include-in-header=header.html \
 		--css=$(style_sheet)            \
 		--template=$(template)          \
-		--from=markdown                 \
+		--from=$(format_in)             \
 		--to=html -o $@ $<              \
 
 build/images/%.webm: posts/images/%.*
@@ -50,7 +51,7 @@ build/about.html: about.md
 	pandoc  --standalone                 \
 		--css=$(index_style_sheet)   \
 		--template=$(index_template) \
-		--from=markdown              \
+		--from=$(format_in)          \
 		--to=html -o build/about.html $<
 
 build/index.html: index.md
@@ -58,7 +59,7 @@ build/index.html: index.md
 		--css=$(index_style_sheet)      \
 		--include-in-header=header.html \
 		--template=$(index_template)    \
-		--from=markdown                 \
+		--from=$(format_in)             \
 		--to=html -o build/index.html $<
 
 index.md: bin/generate_index.lua header.html $(md_files)
