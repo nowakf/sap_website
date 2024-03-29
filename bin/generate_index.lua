@@ -45,6 +45,12 @@ local post_template = [[
 [more...](%s)
 ]]
 
+print([[
+---
+title: nowakf
+---
+]])
+
 for _, elem in ipairs(front_matter) do
 	print(string.format(post_template, elem['filename'],
 						elem['title'],
