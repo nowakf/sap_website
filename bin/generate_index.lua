@@ -7,10 +7,14 @@ end
 local front_matter = {}
 
 --some pretty rough yaml parsing here. It'll prolly shit at some point
+--it shat
 for i, a in ipairs(arg) do
 	local f = assert(io.open(a))
 	local s = assert(f:read('*a'))
-	local header, article_s = s:match('%-%-%-+\n(.-)%-%-%-+()')
+	local header, article_s = s:match('%-%-%-+\n(.-)%-%-%-+()') 
+	if not header or not article_s then
+		error('article has no header?')
+	end
 	local elem = {
 		filename = linkify(a)
 	}
