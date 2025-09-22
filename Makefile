@@ -95,5 +95,5 @@ all: css html images videos index about assets version
 push: all
 	cd build;                  \
 	git add .;                 \
-	git commit -m "$$(date)"   \
+	git commit -m "$$(date)";  \
 	git push -u origin main;   \
